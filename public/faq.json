@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "question": "What is this platform?",
+    "answer": "This platform helps you learn new languages by expanding your vocabulary and improving communication skills."
+  },
+  {
+    "id": 2,
+    "question": "How can I sign up?",
+    "answer": "You can sign up by clicking the \"Sign Up\" button on the homepage and filling in the required details."
+  },
+  {
+    "id": 3,
+    "question": "Is there a mobile app?",
+    "answer": "Currently, we only have a web-based platform, but we are working on launching a mobile app soon."
+  },
+  {
+    "id": 4,
+    "question": "How can I track my progress?",
+    "answer": "You can track your learning progress through your dashboard, where you will find statistics and achievements."
+  }
+]

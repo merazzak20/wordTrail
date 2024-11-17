@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "John Doe",
+    "photo": "https://via.placeholder.com/100",
+    "feedback": "This platform has been an amazing way to learn Spanish! The lessons are interactive and easy to follow.",
+    "date": "February 2024"
+  },
+  {
+    "id": 2,
+    "name": "Jane Smith",
+    "photo": "https://via.placeholder.com/100",
+    "feedback": "I love the quizzes and the progress tracker! It motivates me to keep learning.",
+    "date": "March 2024"
+  },
+  {
+    "id": 3,
+    "name": "Mark Johnson",
+    "photo": "https://via.placeholder.com/100",
+    "feedback": "The vocabulary section helped me master so many new words. Highly recommended!",
+    "date": "April 2024"
+  }
+]
