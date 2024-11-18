@@ -8,15 +8,16 @@ const Counter = () => {
       .then((res) => res.json())
       .then((data) => setWord(data));
   }, []);
+  // console.log(word[1].lesson_no);
 
   const mx = [];
   {
     word.map((w) => {
-      mx.push(w.Lesson_no);
+      mx.push(w.lesson_no);
     });
   }
   const lessonNumber = Math.max(...mx);
-  console.log(lessonNumber);
+  // console.log(lessonNumber);
 
   return (
     <section className="py-16 ">

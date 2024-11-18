@@ -24,7 +24,10 @@ const FAQ = () => {
         <h2 className="text-3xl font-bold mb-6">Frequently Asked Questions</h2>
         <div className="space-y-4">
           {faqs.map((faq, index) => (
-            <div className="collapse collapse-arrow join-item border-base-300 border text-left">
+            <div
+              key={index}
+              className="collapse collapse-arrow join-item border-base-300 border text-left"
+            >
               <input type="radio" name="my-accordion-4" />
               <div className="collapse-title text-xl font-medium">
                 {faq.question}

@@ -5,6 +5,7 @@ import StartLearning from "../pages/StartLearning";
 import Tutorials from "../pages/Tutorials";
 import About from "../pages/About";
 import Profile from "../components/Profile";
+import Login from "../components/Login";
 
 const router = createBrowserRouter([
   {
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
       {
         path: "/profile",
         element: <Profile></Profile>,
+      },
+      {
+        path: "/login",
+        element: <Login></Login>,
       },
     ],
   },
