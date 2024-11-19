@@ -21,18 +21,13 @@ const router = createBrowserRouter([
       {
         path: "/startlearning",
         element: <StartLearning></StartLearning>,
-        // loader: ({ params }) => fetch("/word.json"),
-        // children: [
-        //   {
-
-        //   },
-        // ],
       },
       {
-        path: "/startlearning/lessons",
+        path: "/startlearning/:lesson_no",
         element: <Lesson></Lesson>,
-        // loader: ({ params }) => fetch("/word.json"),
+        loader: ({ params }) => fetch(`/word.json/${params.lesson_no}`),
       },
+
       {
         path: "/tutorials",
         element: <Tutorials></Tutorials>,

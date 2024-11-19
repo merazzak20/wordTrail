@@ -9,7 +9,7 @@ const AboutSection = () => {
           {/* Heading */}
           <h2 className="text-4xl font-bold text-gray-800 mb-12">About Us</h2>
 
-          <div className="grid grid-cols-2 gap-4 text-left">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
             {/* Mission Statement */}
             <div className="max-w-3xl mx-auto  p-8  rounded-lg mb-10 text-justify">
               <h3 className="text-2xl font-semibold text-gray-800 mb-4">

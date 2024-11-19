@@ -3,16 +3,16 @@ import LessonNo from "../components/LessonNo";
 import { Link } from "react-router-dom";
 
 const StartLearning = () => {
-  const [word, setWord] = useState([]);
+  const [lessons, setLessons] = useState([]);
   useEffect(() => {
-    fetch("/word.json")
+    fetch("/lessons.json")
       .then((res) => res.json())
-      .then((data) => setWord(data));
+      .then((data) => setLessons(data));
   }, []);
 
-  const mx = word.map((w) => w.lesson_no);
-  const uniquelesson = [...new Set(mx)];
-  // console.log(uniquelesson);
+  // const mx = word.map((w) => w.lesson_no);
+  // const uniquelesson = [...new Set(mx)];
+  // console.log(word);
   return (
     <div>
       <div className="container mx-auto px-12 text-center">
@@ -21,13 +21,23 @@ const StartLearning = () => {
             Let's Learn
           </h2>
           <p className="font-semibold my-4">
-            Number of Leassons: {uniquelesson.length}
+            Number of Leassons: {lessons.length}
           </p>
         </div>
 
-        <section className="grid grid-cols-3 gap-4">
-          {uniquelesson.map((lesson, idx) => (
-            <LessonNo key={idx} lesson={lesson}></LessonNo>
+        <section className="grid grid-cols-2 md:grid-cols-3 gap-4">
+          {lessons.map((lesson, idx) => (
+            <Link
+              to={`/startlearning/${lesson.id}`}
+              className="cursor-pointer"
+              key={idx}
+            >
+              <div className="bg-gray-100 p-8 shadow-md rounded-lg text-center">
+                <h3 className="text-xl font-semibold text-gray-800">Lesson</h3>
+                <p className="text-xl text-gray-600"></p>
+                <p className="text-gray-500 font-bold text-2xl">{lesson.id}</p>
+              </div>
+            </Link>
           ))}
         </section>
 

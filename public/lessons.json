@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "title": "Introduction to Hindi Alphabets",
+    "description": "Learn the basic Hindi alphabets and their pronunciation.",
+    "lesson_no": 1,
+    "duration": "15 minutes"
+  },
+  {
+    "id": 2,
+    "title": "Common Hindi Greetings",
+    "description": "Master the most commonly used greetings in Hindi.",
+    "lesson_no": 2,
+    "duration": "10 minutes"
+  },
+  {
+    "id": 3,
+    "title": "Numbers in Hindi",
+    "description": "Learn how to count from 1 to 20 in Hindi.",
+    "lesson_no": 3,
+    "duration": "12 minutes"
+  },
+  {
+    "id": 4,
+    "title": "Basic Hindi Grammar",
+    "description": "Understand nouns, verbs, and sentence structure in Hindi.",
+    "lesson_no": 4,
+    "duration": "20 minutes"
+  },
+  {
+    "id": 5,
+    "title": "Essential Hindi Vocabulary",
+    "description": "Learn 20 essential Hindi words for daily use.",
+    "lesson_no": 5,
+    "duration": "18 minutes"
+  },
+  {
+    "id": 6,
+    "title": "Simple Hindi Sentences",
+    "description": "Learn how to form basic sentences in Hindi.",
+    "lesson_no": 6,
+    "duration": "25 minutes"
+  },
+  {
+    "id": 7,
+    "title": "Hindi Pronunciation Tips",
+    "description": "Tips and tricks for accurate Hindi pronunciation.",
+    "lesson_no": 7,
+    "duration": "14 minutes"
+  },
+  {
+    "id": 8,
+    "title": "Common Hindi Phrases",
+    "description": "Learn the most useful phrases for beginners.",
+    "lesson_no": 8,
+    "duration": "16 minutes"
+  },
+  {
+    "id": 9,
+    "title": "Colors in Hindi",
+    "description": "Discover the names of common colors in Hindi.",
+    "lesson_no": 9,
+    "duration": "10 minutes"
+  },
+  {
+    "id": 10,
+    "title": "Practice Conversations",
+    "description": "Engage in sample conversations to practice Hindi speaking.",
+    "lesson_no": 10,
+    "duration": "22 minutes"
+  }
+]
