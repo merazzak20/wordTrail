@@ -7,6 +7,7 @@ import About from "../pages/About";
 import Profile from "../components/Profile";
 import Login from "../components/Login";
 import Register from "../components/Register";
+import Lesson from "../components/Lesson";
 
 const router = createBrowserRouter([
   {
@@ -20,10 +21,22 @@ const router = createBrowserRouter([
       {
         path: "/startlearning",
         element: <StartLearning></StartLearning>,
+        // loader: ({ params }) => fetch("/word.json"),
+        // children: [
+        //   {
+
+        //   },
+        // ],
+      },
+      {
+        path: "/startlearning/lessons",
+        element: <Lesson></Lesson>,
+        // loader: ({ params }) => fetch("/word.json"),
       },
       {
         path: "/tutorials",
         element: <Tutorials></Tutorials>,
+        loader: () => fetch("/tutorials.json"),
       },
       {
         path: "/about",

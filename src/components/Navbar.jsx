@@ -1,9 +1,23 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../provider/AuthProvider";
+import { toast } from "react-toastify";
 
 // Home, start - learning, tutorials, about - us;
 
 const Navbar = () => {
+  const { user, userSignOut } = useContext(AuthContext);
+
+  const handleSignOut = () => {
+    userSignOut()
+      .then(() => {
+        // Sign-out successful.
+        console.log(user);
+      })
+      .catch((error) => {
+        toast.error(error.message);
+      });
+  };
   const links = (
     <div className="flex gap-3">
       <li>
@@ -55,10 +69,30 @@ const Navbar = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{links}</ul>
       </div>
-      <div className="navbar-end">
-        <Link to="/login" className="btn">
-          Login
-        </Link>
+      <div className="navbar-end space-x-2">
+        <div className=" ">
+          {user && user?.photoURL ? (
+            <div>
+              <img className="w-14 rounded-full" src={user?.photoURL} alt="" />
+            </div>
+          ) : (
+            ""
+          )}
+        </div>
+        <div>
+          {user ? (
+            <button
+              onClick={handleSignOut}
+              className="btn btn-neutral rounded-none"
+            >
+              Logout
+            </button>
+          ) : (
+            <Link to="/login" className="btn btn-neutral rounded-none">
+              Login
+            </Link>
+          )}
+        </div>
       </div>
     </div>
   );
