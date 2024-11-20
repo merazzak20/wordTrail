@@ -35,7 +35,7 @@ const Lesson = () => {
         <p className="font-semibold my-4">
           Number of vocabularies in this lesson: {filteredData.length}
         </p>
-        <div className="grid grid-cols-3 md:grid-cols-4 gap-6 my-6">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 my-6">
           {filteredData.map((data) => (
             <div
               className={`card shadow-lg ${
