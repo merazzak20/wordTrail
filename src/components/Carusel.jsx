@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import slide1 from "../assets/AdobeStock_115930057.jpeg";
 import slide2 from "../assets/AdobeStock_511252858.jpeg";
 import slide3 from "../assets/AdobeStock_81800486.jpeg";
+import "animate.css";
 
 const Carousel = () => {
   return (
@@ -16,8 +17,10 @@ const Carousel = () => {
         }}
       >
         <div className="absolute top-[50%] left-[10%]">
-          <h1 className="text-white text-5xl font-bold ">Learn Hindi</h1>
-          <p className="text-white">
+          <h1 className="text-white text-5xl font-bold animate__animated animate__fadeInLeft">
+            Learn Hindi
+          </h1>
+          <p className="text-white animate__animated animate__fadeInDown">
             Expand your vocabulary and communication skills.
           </p>
         </div>
@@ -40,10 +43,12 @@ const Carousel = () => {
         }}
       >
         <div className="absolute top-[50%] left-[10%]">
-          <h1 className="text-white text-5xl font-bold ">
+          <h1 className="text-white text-5xl font-bold animate__animated animate__fadeInLeft">
             Interactive Quizzes
           </h1>
-          <p className="text-white">Test your knowledge in a fun way.</p>
+          <p className="text-white animate__animated animate__fadeInDown">
+            Test your knowledge in a fun way.
+          </p>
         </div>
         <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
           <a href="#slide1" className="btn btn-circle">
@@ -64,8 +69,10 @@ const Carousel = () => {
         }}
       >
         <div className="absolute top-[50%] left-[10%]">
-          <h1 className="text-white text-5xl font-bold ">Daily Challenges</h1>
-          <p className="text-white">
+          <h1 className="text-white text-5xl font-bold animate__animated animate__fadeInLeft">
+            Daily Challenges
+          </h1>
+          <p className="text-white animate__animated animate__fadeInDown">
             Stay motivated with daily word challenges.
           </p>
         </div>

@@ -43,24 +43,6 @@ const Login = () => {
         return;
       });
   };
-  const handleForgotPassword = () => {
-    const em = document.getElementById("email").value;
-
-    if (!em) {
-      toast.warning("Please enter your email address.");
-      return;
-    }
-
-    passwordReset(em)
-      .then(() => {
-        toast.success("Password reset link has been sent to your email.");
-      })
-      .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        toast.error(`Error: ${errorMessage}`);
-      });
-  };
 
   return (
     <div className="flex justify-center items-center min-h-screen">
@@ -99,21 +81,14 @@ const Login = () => {
               required
             />
             <label className="label">
-              <a
-                onClick={handleForgotPassword}
-                href="#"
-                className="label-text-alt link link-hover"
-              >
+              <Link to="/forgot" className="label-text-alt link link-hover">
                 Forgot password?
-              </a>
+              </Link>
             </label>
           </div>
           <div className="form-control mt-6">
             <button className="btn btn-neutral rounded-none">Login</button>
           </div>
-
-          {/* {errorMessage && <p className="text-red-600">{errorMessage}</p>}
-          {success && <p className="text-green-600">Successfully Sign In</p>} */}
         </form>
         <div onClick={handleGoogleSignIn} className="mx-auto my-5">
           <button className="flex justify-arround items-center gap-4 bg-gray-100 btn">

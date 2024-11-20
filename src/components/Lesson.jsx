@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link, useLoaderData, useParams } from "react-router-dom";
 import Modal from "./Modal";
 import { Helmet } from "react-helmet";
+import { HiMiniSpeakerWave } from "react-icons/hi2";
 
 const Lesson = () => {
   const word = useLoaderData();
@@ -11,6 +12,12 @@ const Lesson = () => {
   const filteredData = word.filter(
     (item) => item.lesson_no === parseInt(lesson_no)
   );
+
+  const pronounceWord = (word) => {
+    const utterance = new SpeechSynthesisUtterance(word);
+    utterance.lang = "hi-IN"; // Japanese
+    window.speechSynthesis.speak(utterance);
+  };
 
   console.log(lesson_no);
   return (
@@ -47,13 +54,22 @@ const Lesson = () => {
                   Meaning:{" "}
                   <span className="text-xl font-semibold">{data.meaning}</span>
                 </p>
-                <p>
-                  Pronunciation:{" "}
-                  <span className="text-xl font-medium text-gray-500">
-                    {data.pronunciation}
-                  </span>
-                </p>
+                <div className="">
+                  <p>
+                    Pronunciation:{" "}
+                    <span className="text-xl font-medium text-gray-500">
+                      {data.pronunciation}
+                    </span>
+                  </p>
+                  <div>
+                    <HiMiniSpeakerWave
+                      className="text-2xl mx-auto cursor-pointer"
+                      onClick={() => pronounceWord(data.word)}
+                    />
+                  </div>
+                </div>
                 <p> Part of speech: {data.part_of_speech}</p>
+
                 <button
                   onClick={() => {
                     setSelectedData(data);

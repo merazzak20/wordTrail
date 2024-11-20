@@ -10,6 +10,8 @@ import Register from "../components/Register";
 import Lesson from "../components/Lesson";
 import PrivateRouter from "./PrivateRouter";
 import Error from "../pages/Error";
+import UpdateProfile from "../components/UpdateProfile";
+import ForgotPass from "../components/ForgotPass";
 
 const router = createBrowserRouter([
   {
@@ -49,15 +51,27 @@ const router = createBrowserRouter([
       },
       {
         path: "/profile",
-        element: <Profile></Profile>,
+        element: (
+          <PrivateRouter>
+            <Profile></Profile>
+          </PrivateRouter>
+        ),
       },
       {
         path: "/login",
         element: <Login></Login>,
       },
       {
+        path: "/forgot",
+        element: <ForgotPass></ForgotPass>,
+      },
+      {
         path: "/register",
         element: <Register></Register>,
+      },
+      {
+        path: "/updateProfile",
+        element: <UpdateProfile></UpdateProfile>,
       },
     ],
   },
