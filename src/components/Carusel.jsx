@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import slide1 from "../assets/AdobeStock_115930057.jpeg";
-import slide2 from "../assets/AdobeStock_511252858.jpeg";
-import slide3 from "../assets/AdobeStock_81800486.jpeg";
+import slide1 from "../assets/Slider1.jpeg";
+import slide2 from "../assets/Slider2.jpeg";
+import slide3 from "../assets/Slider3.jpeg";
 import "animate.css";
 
 const Carousel = () => {

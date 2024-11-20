@@ -20,7 +20,7 @@ const Counter = () => {
   // console.log(lessonNumber);
 
   return (
-    <section className="py-16 ">
+    <section className="py-16 " data-aos="fade-up">
       <div className="container mx-auto px-4 text-center">
         <h2 className="text-4xl font-bold text-gray-800 mb-6">
           Our Success So Far

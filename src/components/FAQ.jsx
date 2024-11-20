@@ -19,14 +19,14 @@ const FAQ = () => {
   };
 
   return (
-    <section className="py-16 bg-gray-100">
+    <section className="py-16 ">
       <div className="container mx-auto text-center px-6">
         <h2 className="text-3xl font-bold mb-6">Frequently Asked Questions</h2>
         <div className="space-y-4">
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="collapse collapse-arrow join-item border-base-300 border text-left"
+              className="collapse collapse-arrow join-item border-base-300 border text-left rounded-none"
             >
               <input type="radio" name="my-accordion-4" />
               <div className="collapse-title text-xl font-medium">

@@ -5,3 +5,7 @@
 a.active {
   border-radius: 0;
 }
+
+.slick-slide > div {
+  margin: 0px 10px;
+}

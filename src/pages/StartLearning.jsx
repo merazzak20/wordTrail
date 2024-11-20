@@ -31,7 +31,10 @@ const StartLearning = () => {
           </p>
         </div>
 
-        <section className="grid grid-cols-2 md:grid-cols-3 gap-4">
+        <section
+          className="grid grid-cols-2 md:grid-cols-3 gap-4"
+          data-aos="zoom-in"
+        >
           {lessons.map((lesson, idx) => (
             <Link
               to={`/startlearning/${lesson.id}`}

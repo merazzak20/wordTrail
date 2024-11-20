@@ -39,11 +39,15 @@ const Profile = () => {
           Welcome {displayName}
         </h1>
         <div>
-          <div className="w-52 mx-auto">
-            <img className="mx-auto rounded-md w-full" src={photoURL} alt="" />
+          <div className=" mx-auto">
+            <img
+              className="mx-auto rounded-md w-40 h-40 object-cover"
+              src={photoURL}
+              alt=""
+            />
           </div>
           <div>
-            <p>{email}</p>
+            <p className="my-4 font-medium">{email}</p>
           </div>
         </div>
         <Link to="/updateProfile" className="btn btn-neutral rounded-none my-6">

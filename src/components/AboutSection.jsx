@@ -7,11 +7,19 @@ const AboutSection = () => {
       <section className="py-16 bg-gray-100">
         <div className="container mx-auto px-12 text-center">
           {/* Heading */}
-          <h2 className="text-4xl font-bold text-gray-800 mb-12">About Us</h2>
+          <h2
+            className="text-4xl font-bold text-gray-800 mb-12 "
+            data-aos="fade-down"
+          >
+            About Us
+          </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
             {/* Mission Statement */}
-            <div className="max-w-3xl mx-auto  p-8  rounded-lg mb-10 text-justify">
+            <div
+              className="max-w-3xl mx-auto  p-8  rounded-lg mb-10 text-justify"
+              data-aos="fade-right"
+            >
               <h3 className="text-2xl font-semibold text-gray-800 mb-4">
                 Our Mission
               </h3>
@@ -34,7 +42,10 @@ const AboutSection = () => {
             </div>
 
             {/* How Users Learn Vocabulary */}
-            <div className="max-w-3xl mx-auto bg-white p-8 shadow-lg rounded-lg">
+            <div
+              className="max-w-3xl mx-auto bg-white p-8 shadow-lg rounded-lg"
+              data-aos="fade-left"
+            >
               <h3 className="text-2xl font-semibold text-gray-800 mb-4">
                 How You Can Learn Vocabulary
               </h3>
