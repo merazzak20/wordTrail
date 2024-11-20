@@ -9,6 +9,7 @@ import Login from "../components/Login";
 import Register from "../components/Register";
 import Lesson from "../components/Lesson";
 import PrivateRouter from "./PrivateRouter";
+import Error from "../pages/Error";
 
 const router = createBrowserRouter([
   {
@@ -59,6 +60,10 @@ const router = createBrowserRouter([
         element: <Register></Register>,
       },
     ],
+  },
+  {
+    path: "*",
+    element: <Error></Error>,
   },
 ]);
 
