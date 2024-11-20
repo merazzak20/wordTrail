@@ -16,8 +16,8 @@ const Tutorials = () => {
           {/* Inspiration Video */}
 
           <div className="grid grid-cols-3 md:grid-cols-2 gap-5">
-            {tutorial.map((t) => (
-              <div className="p-6 border border-gray-200 rounded-lg ">
+            {tutorial.map((t, idx) => (
+              <div key={idx} className="p-6 border border-gray-200 rounded-lg ">
                 <iframe
                   width="100%"
                   height="300px"

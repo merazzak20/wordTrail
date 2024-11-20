@@ -8,6 +8,7 @@ import Profile from "../components/Profile";
 import Login from "../components/Login";
 import Register from "../components/Register";
 import Lesson from "../components/Lesson";
+import PrivateRouter from "./PrivateRouter";
 
 const router = createBrowserRouter([
   {
@@ -24,13 +25,21 @@ const router = createBrowserRouter([
       },
       {
         path: "/startlearning/:lesson_no",
-        element: <Lesson></Lesson>,
+        element: (
+          <PrivateRouter>
+            <Lesson></Lesson>
+          </PrivateRouter>
+        ),
         loader: ({ params }) => fetch(`/word.json`),
       },
 
       {
         path: "/tutorials",
-        element: <Tutorials></Tutorials>,
+        element: (
+          <PrivateRouter>
+            <Tutorials></Tutorials>
+          </PrivateRouter>
+        ),
         loader: () => fetch("/tutorials.json"),
       },
       {
