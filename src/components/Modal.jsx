@@ -4,6 +4,7 @@ const Modal = ({ selectedData }) => {
   if (!selectedData) {
     return null;
   }
+  // console.log(selectedData);
   const { word, when_to_say, example } = selectedData;
 
   return (

@@ -73,14 +73,41 @@ const Lesson = () => {
                 <button
                   onClick={() => {
                     setSelectedData(data);
-                    document.getElementById("my_modal_5").showModal();
+                    document.getElementById("my_modal_1").showModal();
                   }}
                   className="btn bg-gray-500 text-white rounded-none my-5"
                 >
                   When to Say
                 </button>
               </div>
-              <Modal selectedData={selectedData}></Modal>
+              {/* <Modal selectedData={selectedData}></Modal> */}
+
+              <dialog id="my_modal_1" className="modal">
+                <div className="modal-box">
+                  <h3 className="font-bold text-4xl mb-3">
+                    {selectedData?.word}
+                  </h3>
+                  <small className="">
+                    When to say:{" "}
+                    <span className="text-base font-medium">
+                      {selectedData?.when_to_say}
+                    </span>
+                  </small>
+                  <br />
+                  <small className="">
+                    Example:{" "}
+                    <span className="text-base font-medium">
+                      {selectedData?.example}
+                    </span>
+                  </small>
+                  <div className="modal-action">
+                    <form method="dialog">
+                      {/* if there is a button in form, it will close the modal */}
+                      <button className="btn">Close</button>
+                    </form>
+                  </div>
+                </div>
+              </dialog>
             </div>
           ))}
         </div>
