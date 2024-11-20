@@ -4,6 +4,23 @@
 
 Let me know if you'd like to tweak it further! 😊
 
+## List of React Fundamental concepts used in the project:
+
+- **Component Structure**
+- **Routing**
+- **Context API**
+- **State Management**
+- **Data Fetching**
+
+## List of Usage Packages:
+
+- **Daisy Ui**
+- **React Toast**
+- **React Slick**
+- **React Icons**
+- **AOS**
+- **Animated CSS**
+
 ## 5 features of this website
 
 1. **Curated Vocabulary Lists**
