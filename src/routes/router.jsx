@@ -25,7 +25,7 @@ const router = createBrowserRouter([
       {
         path: "/startlearning/:lesson_no",
         element: <Lesson></Lesson>,
-        loader: ({ params }) => fetch(`/word.json/${params.lesson_no}`),
+        loader: ({ params }) => fetch(`/word.json`),
       },
 
       {
