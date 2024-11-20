@@ -9,7 +9,7 @@ const LessonNo = ({ lesson }) => {
       .then((data) => setLessons(data));
   }, []);
 
-  console.log(lessons);
+  // console.log(lessons);
 
   return (
     <div>

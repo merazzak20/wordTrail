@@ -4,7 +4,7 @@ import { Link, useLoaderData } from "react-router-dom";
 
 const Tutorials = () => {
   const tutorial = useLoaderData();
-  console.log(tutorial);
+  // console.log(tutorial);
   return (
     <div>
       <Helmet>

@@ -24,7 +24,7 @@ const Register = () => {
     const photo = form.get("photo");
     const email = form.get("email");
     const password = form.get("password");
-    console.log(name, photo, email, password);
+    // console.log(name, photo, email, password);
 
     if (!regex.test(password)) {
       toast.warn("invalid password");
@@ -44,7 +44,7 @@ const Register = () => {
           });
       })
       .catch((err) => {
-        console.log(err.message);
+        // console.log(err.message);
       });
   };
 
@@ -52,7 +52,7 @@ const Register = () => {
     googleSignIn()
       .then((res) => {
         setUser(res.user);
-        console.log(res.user);
+        // console.log(res.user);
         updateUserProfile({ dispalyName: displayName, photoURL: photoURL })
           .then(() => {
             navigate("/");
@@ -62,7 +62,7 @@ const Register = () => {
           });
       })
       .catch((err) => {
-        console.log(err.message);
+        // console.log(err.message);
       });
   };
   return (

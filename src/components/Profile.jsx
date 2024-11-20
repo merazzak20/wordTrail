@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const Profile = () => {
   const { user, loading } = useContext(AuthContext);
   const { displayName, photoURL, email } = user;
-  console.log(loading);
+  // console.log(loading);
 
   if (loading) {
     return (

@@ -8,7 +8,7 @@ const Lesson = () => {
   const word = useLoaderData();
   const { lesson_no } = useParams();
   const [selectedData, setSelectedData] = useState(null);
-  console.log(selectedData);
+  // console.log(selectedData);
   const filteredData = word.filter(
     (item) => item.lesson_no === parseInt(lesson_no)
   );
@@ -19,7 +19,7 @@ const Lesson = () => {
     window.speechSynthesis.speak(utterance);
   };
 
-  console.log(lesson_no);
+  // console.log(lesson_no);
   return (
     <div>
       <Helmet>

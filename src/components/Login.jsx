@@ -10,7 +10,7 @@ const Login = () => {
     useContext(AuthContext);
   const navigate = useNavigate();
   const location = useLocation();
-  console.log(location);
+  // console.log(location);
 
   const handleGoogleSignIn = () => {
     googleSignIn()
@@ -29,11 +29,11 @@ const Login = () => {
 
     const email = form.get("email");
     const password = form.get("password");
-    console.log(email, password);
+    // console.log(email, password);
 
     userSignIn(email, password)
       .then((res) => {
-        console.log(res.user);
+        // console.log(res.user);
         setUser(res.user);
         toast.success("Welcome" + " " + res.user.email);
         navigate(location?.state ? location.state : "/");
