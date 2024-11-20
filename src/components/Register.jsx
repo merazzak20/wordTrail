@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { FaGoogle } from "react-icons/fa";
 import { AuthContext } from "../provider/AuthProvider";
 import { toast } from "react-toastify";
+import { Helmet } from "react-helmet";
 
 const Register = () => {
   const {
@@ -66,6 +67,11 @@ const Register = () => {
   };
   return (
     <div className="flex justify-center items-center min-h-screen">
+      <Helmet>
+        <title>Register - WordTrail</title>
+        <meta name="description" content="Learn more about our company." />
+        <meta name="keywords" content="about, company, information" />
+      </Helmet>
       <div className="card bg-base-100 w-full max-w-lg shrink-0 rounded-none p-10">
         <h2 className="text-center font-semibold text-2xl">
           Register Your Account

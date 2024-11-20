@@ -1,19 +1,22 @@
 import React, { useContext } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaGoogle } from "react-icons/fa";
 import { AuthContext } from "../provider/AuthProvider";
 import { toast } from "react-toastify";
+import { Helmet } from "react-helmet";
 
 const Login = () => {
   const { googleSignIn, userSignIn, setUser, passwordReset } =
     useContext(AuthContext);
   const navigate = useNavigate();
+  const location = useLocation();
+  console.log(location);
 
   const handleGoogleSignIn = () => {
     googleSignIn()
       .then((res) => {
         toast.success("Welcome" + " " + res.user.email);
-        navigate("/");
+        navigate(location?.state ? location.state : "/");
       })
       .catch((err) => {
         toast.error(err.message);
@@ -33,7 +36,7 @@ const Login = () => {
         console.log(res.user);
         setUser(res.user);
         toast.success("Welcome" + " " + res.user.email);
-        navigate("/");
+        navigate(location?.state ? location.state : "/");
       })
       .catch((err) => {
         toast.error(err.message);
@@ -61,6 +64,11 @@ const Login = () => {
 
   return (
     <div className="flex justify-center items-center min-h-screen">
+      <Helmet>
+        <title>Login - WordTrail</title>
+        <meta name="description" content="Learn more about our company." />
+        <meta name="keywords" content="about, company, information" />
+      </Helmet>
       <div className="card bg-base-100 w-full max-w-lg shrink-0 rounded-none p-10">
         <h2 className="text-center font-semibold text-2xl">
           Login Your Account

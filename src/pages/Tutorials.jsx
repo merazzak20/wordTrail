@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Helmet } from "react-helmet";
 import { Link, useLoaderData } from "react-router-dom";
 
 const Tutorials = () => {
@@ -6,6 +7,11 @@ const Tutorials = () => {
   console.log(tutorial);
   return (
     <div>
+      <Helmet>
+        <title>Tutorial - WordTrail</title>
+        <meta name="description" content="Learn more about our company." />
+        <meta name="keywords" content="about, company, information" />
+      </Helmet>
       <section id="inspiration" className="py-16">
         <div className="w-10/12 mx-auto">
           {/* Section Info */}
@@ -32,7 +38,7 @@ const Tutorials = () => {
           </div>
 
           <Link
-            to="/tutorials"
+            to="/startlearning"
             className="btn btn-neutral rounded-none my-5 mt-16"
           >
             Learn Vocabularies

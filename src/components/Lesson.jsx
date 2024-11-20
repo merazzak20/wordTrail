@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link, useLoaderData, useParams } from "react-router-dom";
 import Modal from "./Modal";
+import { Helmet } from "react-helmet";
 
 const Lesson = () => {
   const word = useLoaderData();
@@ -14,6 +15,11 @@ const Lesson = () => {
   console.log(lesson_no);
   return (
     <div>
+      <Helmet>
+        <title>Lesson - WordTrail</title>
+        <meta name="description" content="Learn more about our company." />
+        <meta name="keywords" content="about, company, information" />
+      </Helmet>
       <div className="container mx-auto px-12 text-center">
         <h2 className="text-4xl font-bold text-gray-800 mb-12 my-5">
           Learn Lessons

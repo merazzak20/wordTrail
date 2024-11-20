@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import LessonNo from "../components/LessonNo";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const StartLearning = () => {
   const [lessons, setLessons] = useState([]);
@@ -15,6 +16,11 @@ const StartLearning = () => {
   // console.log(word);
   return (
     <div>
+      <Helmet>
+        <title>Learning - WordTrail</title>
+        <meta name="description" content="Learn more about our company." />
+        <meta name="keywords" content="about, company, information" />
+      </Helmet>
       <div className="container mx-auto px-12 text-center">
         <div>
           <h2 className="text-4xl font-bold text-gray-800 mb-12 my-5">
